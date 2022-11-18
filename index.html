@@ -27,6 +27,7 @@
       // @ts-check
       /** Nombre de usuario atenticado por Firebase. */
       let usuario = "";
+      let avatar ="";
       /** Conexión al sistema de autenticación de Firebase. */
       // @ts-ignore
       const auth = firebase.auth();
@@ -45,6 +46,8 @@
           if (usuarioAuth && usuarioAuth.email) {
             // Usuario aceptado.
             usuario = usuarioAuth.email;
+            // Foto del Avatar
+            avatar = usuarioAuth.photoURL;
             // Muestra los mensajes del chat.
             muestraMensajes();
           } else {
@@ -69,7 +72,8 @@
           // @ts-ignore
           TEXTO: texto.value.trim(),
           // @ts-ignore
-          TIMESTAMP: firebase.firestore.FieldValue.serverTimestamp()
+          TIMESTAMP: firebase.firestore.FieldValue.serverTimestamp(),
+          AVATAR: avatar,
         });
       }
       /** Muestra los mensaje almacenados en la collection "MENSAJE". Se
@@ -102,7 +106,7 @@
                  * para evitar inyección de código. */
                 // @ts-ignore
                 mensajes.innerHTML += /* html */
-                  `<li><u>${cod(data.USUARIO)}</u> ${dformat}<br>${cod(data.TEXTO)}</li>`;
+                `<li><img id="Avatar" alt="Avatar" src="${cod(data.AVATAR)}"><div class="msg">${cod(data.TEXTO)}<br><span class="date"><u>${cod(data.USUARIO)}</u><br>${dformat}</span></li></div>`;
               })
             },
             /* Función que se invoca cuando hay un error. Muestra el error. Al
