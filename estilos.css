@@ -8,7 +8,11 @@ html{
 #texto{
   text-align: center;
 }
-/* Titulo del Documento Caht Modificado*/ 
+/* Salida de los mensajes*/
+#mensajes{
+  text-align: center;
+}
+/* Titulo del Documento Chat Modificado*/ 
 h1{
   text-align: center;
 }
