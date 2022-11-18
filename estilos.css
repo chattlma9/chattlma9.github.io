@@ -10,7 +10,7 @@ html{
 }
 /* Salida de los mensajes*/
 #mensajes{
-  text-align: center;
+  text-align: left;
   display: inline-block;
 }
 /* Titulo del Documento Chat Modificado*/ 
