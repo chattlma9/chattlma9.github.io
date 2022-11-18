@@ -4,6 +4,12 @@ html{
   height: 100%;
   width: 100%;
 }
+h1{
+  text-align: center;
+}
+button{
+  text-align: left;
+}
 body{
   display: inline-block;
   text-align: left;
