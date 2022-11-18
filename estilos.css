@@ -4,9 +4,15 @@ html{
   height: 100%;
   width: 100%;
 }
+/* Input = Barra donde se ingresa el Mensaje */
+#texto{
+  text-align: center;
+}
+/* Titulo del Documento Caht Modificado*/ 
 h1{
   text-align: center;
 }
+/* Boton de Enviar Mensaje */
 button{
   text-align: left;
 }
